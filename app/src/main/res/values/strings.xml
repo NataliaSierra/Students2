@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Students</string>
+    <string name="first_title">Student Notes</string>
+    <string name="second_title">Bienvenido a Little Grasshoppers</string>
+    <string name="first_text">¡Little Grasshoppers te permite llevar a cabo el registro de tus
+        estudiantes y tener el control de estos es cuando al estado de sus materias!> </string>
+    <string name="second_text">Aqui podras:</string>
+    <string name="third_text">- Registrar los datos personales de tus  estudiantes.</string>
+    <string name="four_text">- Registrar los datos de las materias y notas obtenidas por tus
+        estudiantes.</string>
+    <string name="five_text">- Calcular el promedio y determinar si tu estudiante gana
+        o pierde. Si tu estudiante pierde aqui podras informarle si puede recuperar o
+        perdio sin posibilidad de recuperacion.</string>
+    <string name="btnIniciar">INICIAR</string>
+
+
+    <string name="third_title"> Ingresa los datos personales</string>
+    <string name="input_ID">Ingresa el documento</string>
+    <string name="input_name">Ingresa el nombre completo</string>
+    <string name="input_phone">Ingresa el telefono</string>
+    <string name="input_direction">Ingresa la direccion</string>
+
+
+    <string name="hintMateriatxt">Materia </string>
+    <string name="hintNota1txt">Nota</string>
+
+    <string name="btn_addMaterias">SIGUIENTE</string>
+
+
+</resources>
