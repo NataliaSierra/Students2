@@ -1,8 +1,9 @@
 package com.nsierra.students
 
 import android.widget.EditText
+import java.io.Serializable
 
-class Class_DStudents {
+class Class_DStudents : Serializable{
 
     var studentId : Int = 0;
     var studentName : String = "";

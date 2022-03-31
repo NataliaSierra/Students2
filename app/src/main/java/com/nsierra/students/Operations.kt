@@ -18,9 +18,11 @@ class Operations : Serializable {
 
     fun calcularPromedio(student: Class_DStudents): Double {
 
-        var prom=(student.nota1+student.nota2+student.nota3+student.nota4+student.nota4+student.nota5)/5
+        var prom=(student.nota1 + student.nota2 + student.nota3 + student.nota4 + student.nota4 + student.nota5)/5
 
         return prom
+
+
     }
 
     fun consultarLista(student: Class_DStudents) {

@@ -42,6 +42,21 @@
         android:layout_width="167dp"
         android:layout_height="35dp"
         android:fontFamily="sans-serif-black"
+        android:text="Promedio"
+        android:textAlignment="center"
+        android:textColor="#00C2CB"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="167dp"
+        android:layout_height="35dp"
+        android:fontFamily="sans-serif-black"
         android:text="Materia"
         android:textAlignment="center"
         android:textColor="#00C2CB"
@@ -106,6 +121,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.739" />
+
+    <TextView
+        android:id="@+id/promedio"
+        android:layout_width="150sp"
+        android:layout_height="35sp"
+        android:text="Promedio"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
 
     <TextView
         android:id="@+id/note4"
