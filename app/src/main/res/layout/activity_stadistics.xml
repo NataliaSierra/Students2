@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".EstadisticasActivity">
 
     <TextView
@@ -98,6 +99,7 @@
         android:layout_width="40dp"
         android:layout_height="19dp"
         android:text=""
+        android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -111,6 +113,7 @@
         android:layout_width="40dp"
         android:layout_height="19dp"
         android:text=""
+        android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -124,6 +127,7 @@
         android:layout_width="40dp"
         android:layout_height="19dp"
         android:text=""
+        android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
@@ -137,6 +141,7 @@
         android:layout_width="40dp"
         android:layout_height="19dp"
         android:text=""
+        android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.803"
