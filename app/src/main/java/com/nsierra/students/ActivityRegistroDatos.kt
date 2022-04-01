@@ -8,10 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 
-class ActivityRegistroDatos(
-    startActivityForResult: ActivityResultContracts.StartActivityForResult,
-    param: (Any) -> Unit
-) : AppCompatActivity() {
+class ActivityRegistroDatos : AppCompatActivity() {
 
     var idStudent : EditText? = null;
     var nameStudent : EditText? = null;

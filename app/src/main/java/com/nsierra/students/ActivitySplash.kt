@@ -21,18 +21,6 @@ class ActivitySplash : AppCompatActivity() {
 
     }
 
-    /*private val response = ActivityRegistroDatos(ActivityResultContracts.StartActivityForResult()) { valor ->
-            if (valor.resultCode == RESULT_OK) {
-                //resp y resp 2 almacenan el mismo dato, solo se muestran 2 formas como podria capturarse el dato
-                val resp = valor?.data?.extras?.get("resultado") as String
-                val resp2 = valor?.data?.getStringExtra("resultado")
-                println("Valor respuesta=$resp y la resps2=$resp2")
-                //capturamos el objeto nuevo y lo asignamos a operaciones
-                Operaciones = valor?.data?.extras?.get("objetoOperaciones") as Operations?
-                Operaciones?.printListEstudents()
-            }
-        }*/
-
     private fun iniciarComponents() {
 
         var operacionesEnviado: Bundle? = this.intent.extras
@@ -65,23 +53,5 @@ class ActivitySplash : AppCompatActivity() {
             3 -> startActivity(Intent(this, ActivityHelp::class.java))
 
         }
-    }
-    private fun devolverResultados(){
-        var miIntent: Intent = Intent()
-        miIntent.putExtra("resultado","Registro exitoso")
-        var miBundle:Bundle= Bundle()
-        miBundle.putSerializable("objetoOperaciones",Operaciones)
-        miIntent.putExtras(miBundle)
-
-        setResult(RESULT_OK,miIntent)
-    }
-
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Toast.makeText(this, "Se ha cerrado la actividad del registro", Toast.LENGTH_SHORT).show()
-            devolverResultados()
-            finish()
-        }
-        return super.onKeyDown(keyCode, event)
     }
 }
