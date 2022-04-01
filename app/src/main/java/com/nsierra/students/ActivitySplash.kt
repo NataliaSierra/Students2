@@ -21,6 +21,19 @@ class ActivitySplash : AppCompatActivity() {
 
     }
 
+    private val response =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { valor ->
+            if (valor.resultCode == RESULT_OK) {
+                //resp y resp 2 almacenan el mismo dato, solo se muestran 2 formas como podria capturarse el dato
+                val resp = valor?.data?.extras?.get("resultado") as String
+                val resp2 = valor?.data?.getStringExtra("resultado")
+                println("Valor respuesta=$resp y la resps2=$resp2")
+                //capturamos el objeto nuevo y lo asignamos a operaciones
+                Operaciones = valor?.data?.extras?.get("objetoOperaciones") as Operations?
+                Operaciones?.printListEstudents()
+            }
+        }
+
     private fun iniciarComponents() {
 
         var operacionesEnviado: Bundle? = this.intent.extras
@@ -40,16 +53,20 @@ class ActivitySplash : AppCompatActivity() {
 
         when (boton) {
             1 -> {
-
                 var miIntent: Intent = Intent(this, ActivityRegistroDatos::class.java)
                 var miBundle: Bundle = Bundle()
                 miBundle.putSerializable("operaciones", Operaciones)
-                miBundle.putString("Nombre", "Pepe")
                 miIntent.putExtras(miBundle)
-                startActivity(miIntent)
+                response.launch(miIntent)
             }
 
-            2 -> startActivity(Intent(this, ActivityStadistics::class.java))
+            2 -> {
+                var miIntent: Intent = Intent(this, ActivityStadistics::class.java)
+                var miBundle: Bundle = Bundle()
+                miBundle.putSerializable("operaciones", Operaciones)
+                miIntent.putExtras(miBundle)
+                response.launch(miIntent)
+            }
             3 -> startActivity(Intent(this, ActivityHelp::class.java))
 
         }

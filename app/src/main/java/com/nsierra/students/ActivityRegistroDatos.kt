@@ -3,6 +3,7 @@ package com.nsierra.students
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -158,6 +159,24 @@ class ActivityRegistroDatos : AppCompatActivity() {
         Intent.putExtra("Dato11", n5?.getText().toString().toDouble())
 
         startActivity(Intent)
+    }
+    private fun devolverResultados(){
+        var miIntent: Intent = Intent()
+        miIntent.putExtra("resultado","Registro exitoso")
+        var miBundle:Bundle= Bundle()
+        miBundle.putSerializable("objetoOperaciones",operaciones)
+        miIntent.putExtras(miBundle)
+        //miIntent.putExtra("obj",operaciones)
+        setResult(RESULT_OK,miIntent)
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode== KeyEvent.KEYCODE_BACK){
+            Toast.makeText(this, "Se cierra el registro Activity", Toast.LENGTH_SHORT).show()
+            devolverResultados()
+            finish()
+        }
+        return super.onKeyDown(keyCode, event)
     }
 
 }

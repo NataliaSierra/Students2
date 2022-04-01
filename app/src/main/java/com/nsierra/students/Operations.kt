@@ -3,11 +3,13 @@ import java.io.Serializable
 
 
 class Operations : Serializable {
-    var listDataStudents =arrayListOf<Class_DStudents>()
+    var listDataStudents : ArrayList<Class_DStudents> = arrayListOf<Class_DStudents>()
 
     fun registerStudent(student: Class_DStudents){
 
         listDataStudents.add(student)
+
+
     }
 
     fun printListEstudents(){
